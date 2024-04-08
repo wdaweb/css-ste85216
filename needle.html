@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            /* background: red; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+        }
+
+        .nBody {
+            
+            width: 500px;
+            height: 100px;
+            background-image: linear-gradient(#fff, #d3d3d3 50%,#fff );
+            /* background-image: repeating-linear-gradient(90deg,#fff 49%,#000 50% ,#fff ,#000 50%); */
+            border: 1px solid #aaa;
+        }
+
+        .nBody::before {
+            content: "";
+            width: 497px;
+            height: 15px;
+            /* border: 1px solid #000; */
+            background-image: repeating-linear-gradient(90deg,transparent 49.8%,#000 ,transparent 50%,transparent 52%);
+
+            position: absolute;
+            
+        }
+
+        .nBody::after{
+            content: "";
+            width: 50px;
+            height: 98px;
+            background: rgb(0, 0, 0);
+            /* border: 1px solid #000; */
+            position: absolute;
+            left: 45%;
+        }
+
+        .nBody2 {
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            background-image: linear-gradient(#fff, #d3d3d3 50%,#fff );
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            top: 0%;
+            left: -20%;
+        }
+
+        .nBody2::before {
+            content: "";
+            width: 50px;
+            height: 60px;
+            position: absolute;
+            background-image: linear-gradient(#fff, #d3d3d3 50%,#fff );
+            border: 1px solid #aaa;
+            /* border-radius: 8px; */
+            top: 50%;
+            left: 48px;
+            transform: translateY(-50%);
+        }
+
+        .nBody2::after {
+            content: "";
+            width: 40px;
+            height: 60px;
+            position: absolute;
+            background-image: linear-gradient(#fff, #d3d3d3 50%,#fff );
+            border: 1px solid #aaa;
+            border-radius: 0 6px 6px 0;
+            top: 50%;
+            left: 598px;
+            transform: translateY(-50%);
+        }
+
+        .needle {
+            width: 90px;
+            height: 1px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left: 541px;
+        }
+
+        .needle::before {
+            content: "";
+            width: 225px;
+            height: 98px;
+            position: absolute;
+            background: rgba(251, 255, 0, 0.3);
+            top: -49px;
+            left: -267px;
+        }
+
+        .nBody p {
+            padding: 4px;
+            color: #aaa;
+            position: absolute;
+            top: 75%
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nBody">
+            <p>Made in Taiwan</p>
+            
+        </div>
+        <div class="nBody2"></div>
+        <div class="needle"></div>
+        
+    </div>
+</body>
+</html>
